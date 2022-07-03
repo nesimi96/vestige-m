@@ -1,0 +1,132 @@
+.Checkout {
+    padding: 25px 12px 100px 12px;
+
+    @media screen and (min-width: 900px) {
+        padding: 25px 30px 100px 30px;
+        display: flex;
+        & > * {
+            margin: 10px;
+        }
+    }
+
+    & h1 {
+        text-align: center;
+        line-height: 2.5;
+        font-size: 18px;
+        color: rgb(82, 81, 81);
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+    }
+}
+
+@mixin wrappers-headers {
+    border-bottom: 1px solid rgb(189, 187, 187);
+    padding-left: 20px;
+    color: rgb(202, 202, 202);
+    & h3 {
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: rgb(49, 49, 49);
+    }
+}
+
+.FormWrapper {
+   background-color: #fff;
+   border: .5px solid rgb(219, 219, 219);
+   padding-bottom: 20px;
+   box-shadow: 10px 25px 50px rgba(0, 0, 0, .05);
+
+   @media screen and (min-width: 900px) {
+      order: -1;
+      width: 350px;
+      margin-left: 10%;
+  }
+
+  @media screen and (min-width: 1100px) {
+    width: 750px;
+}
+
+   &-header {
+       @include wrappers-headers;
+   }
+
+}
+
+.Form {
+    padding: 0 5%;
+
+    &-inputs {
+        position: relative;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+    
+        &-error {
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+
+            color: rgb(247, 80, 62);
+        }
+
+        & p {
+            line-height: 0;
+        }
+    }
+            
+    &-button {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        width: 100%;
+        align-self: center;
+    }
+}
+
+.CheckoutSummary {
+    background-color: #fff;
+    border: .5px solid rgb(219, 219, 219);
+    box-shadow: 10px 25px 50px rgba(0, 0, 0, .05);
+
+    @media screen and (min-width: 900px) {
+        max-width: 500px;
+    }
+    
+    
+    &-header {
+        position: relative;
+        @include wrappers-headers;
+    }
+    
+    &-summary {
+        padding: 0 15px 10px 15px;
+        border-bottom: .5px solid rgb(201, 199, 199);
+    }
+
+    &-promo {
+        padding: 10px 15px;
+        border-bottom: .5px solid rgb(201, 199, 199);
+    }
+
+    &-total {
+        padding: 0 15px 10px 15px;
+    }
+
+}
+
+.PromoCode {
+    display: flex;
+    align-items: center;
+    height: 30px;
+
+    &-button {
+        height: 27.5px;
+        width: 160px;
+        margin-left: 20px;
+    }
+}

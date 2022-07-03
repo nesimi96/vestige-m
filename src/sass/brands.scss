@@ -1,0 +1,33 @@
+.Brands {
+    background-color: #fff;
+    overflow: hidden;
+    color: $gold-hard;
+    text-align: center;
+    margin-top: 20px;
+
+    &-golden-line {
+        @include golden-line;
+    }
+
+    &-wrapper {
+        display: flex;
+        animation: brandsAnime 35s linear infinite;
+        width: max-content;
+
+        & img {
+            height: 100%;
+            width: 180px;
+        }
+    }
+}
+
+@keyframes brandsAnime {
+    0% {
+       transform: translateX(7.5%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+

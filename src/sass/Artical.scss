@@ -1,0 +1,70 @@
+.Artical {
+    margin-top: 50px;
+    text-align: center;
+
+    &-slider-holder {
+        @include flex-center;
+        width: 100%;
+    }
+
+    &-controller-holder {
+        margin-top: 20px;
+    }
+}
+
+.ArticalSlider {
+    width: 300px;
+    position: relative; 
+
+    &-mainImg {
+        & img { 
+            @include max-width-height;
+         }
+    }
+
+    &-otherImgs {
+        display: flex;
+        & > * { 
+            margin: 5px 10px 0 0;
+         }
+
+        & img { 
+            @include max-width-height;
+            transition: all .25s ease-in-out;
+            border-radius: 4px;
+         }
+    }
+}
+
+.ArticalController {
+    
+    &-controller {
+       display: flex;
+       flex-direction: column;
+    }
+}
+
+.Controller {
+    height: max-content;
+    @include flex-center;
+    margin-top: 10px;
+
+    & p {
+        line-height: 0.05;
+    }
+
+   &-controlling {
+      @include flex-center;
+      font-size: 20px;
+      margin-left: 10%;
+
+      &-wrapper {
+        border: 1px solid $gold-hard;
+        height: 25px;
+        width: 25px;
+        @include flex-center;
+        font-size: 25px;
+      }
+   }
+
+}

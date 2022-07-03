@@ -1,0 +1,28 @@
+
+@mixin jost-font {
+    font-family: 'Jost', sans-serif;
+}
+
+@mixin max-width-height {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin golden-line {
+    border-bottom: 1px solid $gold-hard;
+    width: 30px;
+    margin: auto;
+    transform: rotate(90deg);   
+}
+
+@keyframes pulsating {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}

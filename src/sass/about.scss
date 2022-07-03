@@ -1,0 +1,50 @@
+.About {
+    background-color: #fff;
+    padding-top: 20px;
+
+
+    @media screen and (min-width: 650px) {
+       display: grid;
+       justify-content: center;
+       grid-template-columns: 45% 45%;
+    }
+
+    &-text {
+        padding: 0 15px 0 15px;
+
+        @media screen and (min-width: 650px) {
+            padding: 20px 15px 0 15px;
+         }
+
+         @media screen and (min-width: 950px) {
+            padding: 30px 15px 0 15px;
+         }
+    }
+
+    &-img {
+        position: relative;
+        margin-top: 30px;
+
+        @media screen and (min-width: 650px) {
+            height: 350px;
+         }
+
+        &-logo {
+           position: absolute;
+           top: 30%;
+           left: 30%;
+           transform: translate(-50%, -50%);
+           
+           & img  {
+               height: 30px;
+               width: 80px;
+               transform: rotate(-20deg);
+           }
+        }
+
+        & img {
+            @include max-width-height;
+            filter: brightness(40%);
+        }
+    }
+}

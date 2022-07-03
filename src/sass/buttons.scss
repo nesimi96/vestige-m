@@ -1,0 +1,70 @@
+.SecondaryButton {
+    @include max-width-height;
+    @include flex-center;
+    background-color: #806c53;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+        background-color: #9c8569;
+    }
+}
+
+.ThirdButton {
+    @include max-width-height;
+    @include flex-center;
+    border: .5px solid rgb(187, 186, 186);
+    box-shadow: 0 1px 6px 0 rgba(216, 214, 214, 0.25);
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+     
+    &:hover {
+        background-color: #eee;
+    }
+}
+
+.AlertButton {
+    background-color: #333;
+    margin-top: 20px;
+    padding: 10px 27px;
+    border-radius: 3px;
+    border: inherit;
+    color: #fff;
+    transition: all .35s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(73, 73, 73);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.PaginationButton {
+    border: .5px solid rgb(209, 207, 207);
+    background-color: #fff;
+    box-shadow: 0 1px 6px 0 rgba(216, 214, 214, 0.2);
+    border-radius: 2.5px;
+    padding: 15px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #eee;
+    }
+
+}
+
+.CountryButton {
+    background-color:transparent;
+    padding: 10px 20px;
+    border: 1px solid rgb(73, 73, 73);
+    border-radius: 100px;
+    letter-spacing: .5px;
+    font-weight: 500;
+    box-shadow: 10px 5px 15px rgba(0, 0, 0, .2);
+}

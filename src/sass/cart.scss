@@ -1,0 +1,215 @@
+@mixin utility-border-bottom {
+    border-bottom: .35px solid rgb(189, 189, 189);
+}
+
+.Cart {
+    background: #f9f9f9 linear-gradient(170deg,rgba(247,244,240,1) 0,rgba(221,215,210,1) 60%,rgba(251,249,247,1));
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 0 18px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    max-width: 470px;
+    
+    &-wrapper {
+        position: relative;
+        @include max-width-height;
+    }
+       
+    // CART HEADER
+    &-CartHeader {
+        @include utility-border-bottom;
+        height: 7.5vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        color: rgba(0, 0, 0, .8);
+    
+        &-close {
+          position: absolute;
+          right: 5px;
+          font-size: 21.5px;
+          cursor: pointer;
+        }
+    }
+
+    // CART SUMMARY
+    &-CartSummary {
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 56vh;
+        @include utility-border-bottom;
+
+        &::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+    }
+
+    // CART TOTAL
+    &-Total {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &-prices {
+            @include utility-border-bottom;
+            height: 11vh;
+            font-style: normal;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+
+           & div {
+                height: 50%;
+                display: flex;
+                align-items: center;
+           }
+
+           &__money-first,
+           &__delivery-first { 
+               flex: 1;
+               font-weight: 300;
+               color: rgb(100, 98, 98);
+               font-size: 13px;
+            }
+
+            &__money-second,
+            &__delivery-second {
+                font-weight: 500;
+                color: rgb(44, 44, 44);
+                font-size: 14.5px;
+            }
+        }
+
+        &-total {
+            position: relative;
+            height: 7vh;
+            display: flex;
+            align-items: center;
+            @include utility-border-bottom;
+            
+            &-first {
+                flex: 1;
+                font-size: 15.5px;
+                color: rgb(63, 62, 62);
+            }
+
+            &-second {
+                font-size: 17.5px;
+                color: rgb(20, 20, 20);
+            }
+
+        }
+
+        &-proceed {
+            margin-top: 8px;
+            height: 7.5vh;
+        }
+    }
+}
+
+.CartItem {
+    display: grid;
+    margin-top: 13px;
+    grid-template-columns: 60px 1fr 90px;
+
+    &-imgHolder {
+        height: 60px;
+        width: 60px;
+
+        & img {
+            @include max-width-height;
+        }
+    }
+
+    &-description {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+
+        & p {
+            line-height: 1;
+
+            & span {
+                font-size: 10px;
+                margin-left: 3px;
+                color: rgba(0, 0, 0, .85);
+            }
+        }
+
+        & div {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            font-size: 12px;
+            transform: translateY(-7px);
+            color: rgb(173, 168, 168);
+            cursor: pointer;
+            transition: all .15s ease-in-out;
+            &:hover {
+                color: rgb(70, 70, 70);
+            }
+        }
+    }
+
+    &-price {
+        letter-spacing: 2px;
+        align-self: center;
+        color: $gold-hard;
+        font-size: 15px;
+    }
+}
+
+
+@keyframes cartOpening {
+     0% {
+         width: 0;
+     }
+
+     100% {
+         width: 100%;
+     }
+}
+
+@keyframes cartClosing {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes wrapperOpening {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes wrapperClosing {
+    0% {
+        display: block;
+    }
+
+    50% {
+        display: none;
+    }
+
+    100% {
+        display: none;
+    }
+}

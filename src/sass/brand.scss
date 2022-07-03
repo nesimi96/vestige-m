@@ -1,0 +1,21 @@
+.Brand {
+    padding: 25px 0 50px 0;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+
+    &-line {
+        @include golden-line;
+    }
+
+    &-brand {
+        color: $gold-hard;
+    }
+
+    &-description {
+        color: rgba(0, 0, 0, .85);
+        padding: 0 40px 0 40px;
+        letter-spacing: .5px;
+    }
+}
+
+

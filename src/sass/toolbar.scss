@@ -1,0 +1,100 @@
+.Toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 53px;
+    transition: all .5s linear;
+
+    &-elements-holder {
+        position: relative;
+        @include max-width-height;
+        display: flex;
+        justify-content: center;
+     
+        &__hamburger {
+            //background-color: rgb(248, 237, 237);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 100%;
+
+            @media screen and (min-width: 650px) {
+                visibility: hidden;
+              }
+        }
+
+        &__logo {
+            //background-color: white;
+            width: 140px;
+            height: 100%;
+            z-index: 1000;
+            cursor: pointer;
+
+            @media screen and (min-width: 650px) {
+                position: absolute;
+                left: 0;
+              }
+        }
+
+        &__icons {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: max-content;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 4px;
+            align-items: center;
+            margin-right: 3.5%;
+            cursor: pointer;
+            @media screen and (min-width: 900px) {
+                column-gap: 6px;
+                margin-right: 30px;
+              }
+
+            &-cart {
+                position: relative;
+                
+                &-numHolder {
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                    background-color: $gold-lighter;
+                    color: rgb(32, 32, 32);
+                    font-weight: 700;
+                    width: 16.5px;
+                    height: 16.5px;
+                    font-size: 11px;
+                    border-radius: 100rem;
+                    border: 1px solid $gold-hard;
+                    @include flex-center;
+                }
+            }
+        }
+    }
+
+}
+
+.articalNumHolder {
+    animation: articalOrdered .25s ease-in-out;
+}
+
+
+
+@keyframes articalOrdered {
+    0% {
+        transform: scale(.8);
+    }
+
+    50% {
+        transform: scale(1.45);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,81 @@
+.Footer {
+    position: relative;
+    background: linear-gradient(227deg, rgb(37, 35, 33), rgb(22, 21, 21));
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 100px 0;
+
+    @media screen and (min-width: 650px) {
+        flex-direction: row;
+       }
+
+    &-pages {
+        display: flex;
+        margin-top: 45px;
+        justify-content: center;
+        padding: 0 25px;
+
+        @media screen and (min-width: 650px) {
+            flex-direction: column;
+            order: -2;
+            margin-left: 15%;
+            align-items: start;
+           }
+
+        & > * { 
+            margin: 0 5px;
+            transition: all .3 ease-in;
+            cursor: pointer;
+            @media screen and (min-width: 650px) {
+                margin: 3px 0;
+               }
+        &:hover {
+            color: #fff;
+        }
+    }
+
+        & p { 
+            color: rgb(184, 142, 108) 
+         }
+    }
+
+    &-contact {
+        margin-left: 20px;
+        font-family: 'Roboto', sans-serif;
+
+        @media screen and (min-width: 650px) {
+            position: absolute;
+            right: 15%;
+           }
+       
+        &-item {
+            display: grid;
+            grid-template-columns: 25px 1fr;
+            align-items: center;
+
+            & p {
+                font-size: 12px;
+                line-height: 0;
+                color: rgb(184, 142, 108);
+            }
+
+            & a {
+                text-decoration: none;
+                color: rgb(184, 142, 108);
+            }
+        }
+    }
+
+    &-logo {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+
+        & img {
+            width: 130px;
+            height: 55px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.Pagination {
+    width: 100%;
+    @include flex-center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    & > * {
+        margin: 2px;
+    }
+
+    &-arrows {
+        border: .5px solid rgb(209, 207, 207);
+        box-shadow: 0 1px 6px 0 rgba(216, 214, 214, 0.2);
+        border-radius: 2.5px;
+        padding: 15px;
+        background-color: #fff;
+    }
+}

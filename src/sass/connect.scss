@@ -1,0 +1,24 @@
+.Connect {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+
+    & p {
+        color: $gold-hard;
+    }
+
+    &-line {
+        @include golden-line;
+    }
+
+    &-text-holder {
+        display: flex;
+        flex-direction: column;
+        
+        & p {
+            line-height: 0;
+            color: black;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.OrderSummary {
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+}
+
+
+.Order {
+    color: black;
+
+    & > * {
+        border: .5px solid rgb(201, 201, 201);
+        & p {
+            line-height: 1.1;
+        }
+    }
+
+    &-summary {
+        display: grid;
+        justify-content: start;
+        grid-template-columns: 70% 30%;
+        
+         &-articalName {
+          justify-self: start;
+          padding-left: 15px;
+         }
+    }
+
+    &-total {
+        display: grid;
+        justify-content: start;
+        grid-template-columns: 70% 30%;
+
+        &-total-word {
+            justify-self: start;
+            padding-left: 15px;
+        }
+    }
+
+}
+
+.totalPriceAlert {
+    font-size: 13px;
+    color: rgba(0, 0, 0, .75)
+}
+
+.parasID {
+    font-size: 15px;
+    line-height: .7;
+}

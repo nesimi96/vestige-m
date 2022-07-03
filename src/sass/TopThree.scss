@@ -1,0 +1,95 @@
+.TopThree {
+    background-color: white;
+    text-align: center;
+    padding-top: 45px;
+    font-size: 8px;
+    font-weight: 700;
+    overflow: hidden;
+
+    @media screen and (min-width: 650px) {
+        padding-top: 70px;
+    }
+
+    @media screen and (min-width: 900px) {
+        padding-top: 100px;
+    }
+
+    &-nonScrollable {
+       
+        @media screen and (min-width: 650px) {
+                margin-top: 50px;
+                display: flex;
+        }
+
+        @media screen and (min-width: 750px) {
+           padding: 0 30px;
+        }
+
+        @media screen and (min-width: 900px) {
+            padding: 0 120px;
+         }
+
+         @media screen and (min-width: 1200px) {
+            padding: 0 145px;
+         }
+
+    }
+
+
+    & h1 {
+        letter-spacing: 1.3px;
+    }
+
+    &-Slider {
+        background-color: rgb(255, 255, 255);
+    }
+
+}
+
+
+.TopThreeComponent {
+
+    width: 100%;
+
+    &-image {
+        width: 100%;
+        height: 215px;
+        cursor: pointer;
+
+        @media screen and (min-width: 900px) {
+            &:hover img {
+                transform: translateY(-30px);
+            }
+         }
+
+        & img {
+            width: 170px;
+            height: 100%;
+            transition: all .25s ease-in-out;
+        }
+    }
+
+    &-brand {
+        font-size: 15px;
+
+        & span {
+            font-size: 22px;
+            margin-left: 7px;
+            color: $gold-hard;
+        }
+    }
+
+    &-price {
+        color: $gold-hard;
+        font-size: 16px;
+        font-weight: 700;
+        padding-bottom: 50px;
+
+        & span {
+            color: black;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+}
